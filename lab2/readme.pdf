@@ -1,0 +1,42 @@
+Name: Jeff Cui
+SID: 8181687359
+Email: jeffcui@usc.edu
+
+Program Summary:
+This program takes in 3 randomly generated parameters: x,y and d 
+and uses them to calculate a term Zcomputed. It also calculates a
+second term, Zblackbox, which is Zcomputed but with a random error
+
+The program takes the difference between the two terms, aka the error
+and writes it to a file. It does this for 10,000 randomly generated x,y
+and d values.
+
+--------------------------------------------------------------------------
+References:
+No help was used on algorithms/solutions.
+
+Internet and resources like online Python documentation, etc was used 
+to help figure out things like check_output or writing to a file. 
+
+--------------------------------------------------------------------------
+Instructions:
+Type "python 8181687359tester.py" into the command line to run the program.
+
+Type "./8181687359blackbox x y d" into command line to run just the 
+C code. Replace x y and d with 3 floating point values.
+
+--------------------------------------------------------------------------
+Other Information:
+The main limitation of this program is that the randomly generated numbers
+are not true random numbers but pseudo-random numbers due to how the 
+rand() and random functions work. As a result multiple runs of the same 
+combination over and over will only return 1 single result.
+
+Ex. Running "./8181687359blackbox 1 2 3" will always return the same value. 
+Even though that value is randomly generated, it's not true random 
+and therefore doesn't have variance over many trials.
+
+Print statements are generally vague because Zblackbox is a string but 
+needs to be converted to a float. As such if Zblackbox is a string like
+"zd = 8.18" then it cannot be converted to a float. 
+
