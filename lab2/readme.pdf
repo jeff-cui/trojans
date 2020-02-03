@@ -3,9 +3,16 @@ SID: 8181687359
 Email: jeffcui@usc.edu
 
 Program Summary:
+Part A:
+Program takes in 3 parameters from command line: x, y and d. These are 
+used to compute zd = x^2 + y^2 + e where e is a randomly generated error
+term based on x^2 + y^2 and d. 
+
+Part B:
 This program takes in 3 randomly generated parameters: x,y and d 
-and uses them to calculate a term Zcomputed. It also calculates a
-second term, Zblackbox, which is Zcomputed but with a random error
+and uses them to calculate a term Zcomputed = x^2 + y^2. It also 
+calculates a second term, Zblackbox, using Part A code. 
+Zblackbox is Zcomputed but with the random error e.
 
 The program takes the difference between the two terms, aka the error
 and writes it to a file. It does this for 10,000 randomly generated x,y
@@ -15,18 +22,22 @@ and d values.
 References:
 No help was used on algorithms/solutions.
 
-Internet and resources like online Python documentation, etc was used 
-to help figure out things like check_output or writing to a file. 
+Internet and resources like online Python documentation from 
+python.org and W3Schools, etc was used to help figure out things like 
+check_output or writing to a file. 
 
 --------------------------------------------------------------------------
 Instructions:
-Type "python 8181687359tester.py" into the command line to run the program.
-
+Part A:
 Type "./8181687359blackbox x y d" into command line to run just the 
 C code. Replace x y and d with 3 floating point values.
 
+Part B:
+Type "python 8181687359tester.py" into the command line to run the program.
+
 --------------------------------------------------------------------------
 Other Information:
+Part A and B:
 The main limitation of this program is that the randomly generated numbers
 are not true random numbers but pseudo-random numbers due to how the 
 rand() and random functions work. As a result multiple runs of the same 
@@ -39,4 +50,9 @@ and therefore doesn't have variance over many trials.
 Print statements are generally vague because Zblackbox is a string but 
 needs to be converted to a float. As such if Zblackbox is a string like
 "zd = 8.18" then it cannot be converted to a float. 
+
+For Part A's executable, the command line arguments must be 3 floating
+point values. The program will check if there are 3 arguments and it will
+still run if they aren't floating point values but user must be fairly
+precise on the inputs.
 
